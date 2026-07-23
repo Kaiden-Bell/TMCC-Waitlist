@@ -111,18 +111,12 @@ def send_message_alert(status, seats, blast_num):
     except Exception as e:
         print(f"Failed to send alert: {e}")
 
-async def main_loop():
-    while True:
-        try:
-            await gather_html()
-        except Exception as main_error:
-            print(f"Loop error occurred: {main_error}. Trying again in 5 mins.")
-        
-        print("LOG: Sleeping for 5 minutes...")
-        await asyncio.sleep(300)
-
 if __name__ == "__main__":
-    asyncio.run(main_loop())
+    try:
+        asyncio.run(gather_html())
+    except Exception as main_error:
+        print(f"Execution error occurred: {main_error}")
+
 
 
 
