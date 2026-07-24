@@ -33,7 +33,7 @@ To keep your credentials safe, **never** push a `.env` file to your repository. 
 Inject these three keys:
 *   `SENDER_EMAIL`: The bot's Gmail address (e.g., `tmccwaitlist@gmail.com`).
 *   `APP_PASSWORD`: A unique 16-character Google App Password (not your primary password).
-*   `RECIEVER_PHONE`: The target phone number with carrier SMS gateway (e.g., `7754128944@vtext.com`).
+*   `RECIEVER_PHONE`: The target phone number with carrier SMS gateway (e.g., `1234567890@vtext.com`).
 
 ### 2. Tailor Your Monitoring Cadence
 Open `.github/workflows/scrape.yml` and adjust the cron expression to choose how often the script checks for openings.
